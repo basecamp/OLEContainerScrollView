@@ -5,8 +5,6 @@
  https://github.com/ole/OLEContainerScrollView
  */
 
-@import UIKit;
+#import <objc/runtime.h>
 
-@interface SimpleTableViewController : UIViewController
-
-@end
+IMP OLEReplaceMethodWithBlock(Class c, SEL origSEL, id block);

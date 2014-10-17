@@ -7,6 +7,6 @@
 
 @import UIKit;
 
-@interface SimpleTableViewController : UIViewController
+@interface MultipleCollectionsViewController : UIViewController
 
 @end

@@ -7,6 +7,8 @@
 
 @import UIKit;
 
-@interface SimpleTableViewController : UIViewController
+@interface UIColor (RandomColor)
+
++ (instancetype)randomColor;
 
 @end

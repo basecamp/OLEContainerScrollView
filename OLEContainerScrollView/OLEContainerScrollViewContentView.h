@@ -7,6 +7,5 @@
 
 @import UIKit;
 
-@interface SimpleTableViewController : UIViewController
-
+@interface OLEContainerScrollViewContentView : UIView
 @end

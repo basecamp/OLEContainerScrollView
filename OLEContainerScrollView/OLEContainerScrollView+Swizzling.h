@@ -5,8 +5,5 @@
  https://github.com/ole/OLEContainerScrollView
  */
 
-@import UIKit;
-
-@interface SimpleTableViewController : UIViewController
-
-@end
+void swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates();
+void swizzleUITableView();

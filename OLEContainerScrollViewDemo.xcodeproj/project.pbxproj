@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53226DF5431F4EF0A0BD9E0B /* libPods-OLEContainerScrollViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2BEBEEEF454AFB9C289590 /* libPods-OLEContainerScrollViewDemo.a */; };
+		5D050BE41959D8F200D2447F /* MultipleCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */; };
+		5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */; };
 		5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */; };
 		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
 		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
+		5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */; };
+		5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */; };
+		5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */; };
+		5D8CFD7B1981729D00B3B7F7 /* MultipleTableViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */; };
 		5DBDF1E518D5F26B005B1E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E418D5F26B005B1E18 /* Foundation.framework */; };
 		5DBDF1E718D5F26B005B1E18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */; };
 		5DBDF1E918D5F26B005B1E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E818D5F26B005B1E18 /* UIKit.framework */; };
@@ -20,32 +25,30 @@
 		5DBDF1F818D5F26B005B1E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF1F618D5F26B005B1E18 /* Main.storyboard */; };
 		5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */; };
 		5DBDF1FD18D5F26B005B1E18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */; };
-		5DBDF20418D5F26B005B1E18 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF20318D5F26B005B1E18 /* XCTest.framework */; };
-		5DBDF20518D5F26B005B1E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E418D5F26B005B1E18 /* Foundation.framework */; };
-		5DBDF20618D5F26B005B1E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E818D5F26B005B1E18 /* UIKit.framework */; };
-		5DBDF20E18D5F26B005B1E18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */; };
-		5DBDF21018D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF20F18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m */; };
-		5DBDF21B18D5F2A2005B1E18 /* SimulatedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */; };
+		5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */; };
 		5DEAE59F192CF6A80075B6DE /* OLEContainerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		5DBDF20718D5F26B005B1E18 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DBDF1D918D5F26B005B1E18 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5DBDF1E018D5F26B005B1E18;
-			remoteInfo = ScrollVisualization;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		5D050BE21959D8F200D2447F /* MultipleCollectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleCollectionsViewController.h; sourceTree = "<group>"; };
+		5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleCollectionsViewController.m; sourceTree = "<group>"; };
+		5D050BE51959DEAD00D2447F /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
 		5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEBorderedView.h; sourceTree = "<group>"; };
 		5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEBorderedView.m; sourceTree = "<group>"; };
 		5D2A88E9192246D700CEE791 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
 		5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 		5D63B221192250990064DB38 /* NaiveContainerScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveContainerScrollViewController.h; sourceTree = "<group>"; };
 		5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaiveContainerScrollViewController.m; sourceTree = "<group>"; };
+		5D8CFD6C19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OLEContainerScrollView+Swizzling.h"; sourceTree = "<group>"; };
+		5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OLEContainerScrollView+Swizzling.m"; sourceTree = "<group>"; };
+		5D8CFD7219815DA800B3B7F7 /* OLESwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLESwizzling.h; sourceTree = "<group>"; };
+		5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLESwizzling.m; sourceTree = "<group>"; };
+		5D8CFD7519815E5300B3B7F7 /* OLEContainerScrollViewContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollViewContentView.h; sourceTree = "<group>"; };
+		5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollViewContentView.m; sourceTree = "<group>"; };
+		5D8CFD781981623200B3B7F7 /* OLEContainerScrollView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView_Private.h; sourceTree = "<group>"; };
+		5D8CFD791981729D00B3B7F7 /* MultipleTableViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleTableViewsViewController.h; sourceTree = "<group>"; };
+		5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleTableViewsViewController.m; sourceTree = "<group>"; };
 		5DBDF1E118D5F26B005B1E18 /* OLEContainerScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLEContainerScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBDF1E418D5F26B005B1E18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,17 +63,11 @@
 		5DBDF1F918D5F26B005B1E18 /* CustomContainerScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomContainerScrollViewController.h; sourceTree = "<group>"; };
 		5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomContainerScrollViewController.m; sourceTree = "<group>"; };
 		5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5DBDF20218D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OLEContainerScrollViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBDF20318D5F26B005B1E18 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5DBDF20B18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OLEContainerScrollViewDemoTests-Info.plist"; sourceTree = "<group>"; };
-		5DBDF20D18D5F26B005B1E18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5DBDF20F18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollViewDemoTests.m; sourceTree = "<group>"; };
-		5DBDF21918D5F2A2005B1E18 /* SimulatedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatedTableView.h; sourceTree = "<group>"; };
-		5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatedTableView.m; sourceTree = "<group>"; };
+		5DBDF21918D5F2A2005B1E18 /* OLESimulatedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLESimulatedTableView.h; sourceTree = "<group>"; };
+		5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLESimulatedTableView.m; sourceTree = "<group>"; };
 		5DEAE59D192CF6A80075B6DE /* OLEContainerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView.h; sourceTree = "<group>"; };
 		5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollView.m; sourceTree = "<group>"; };
-		E5FA386E42C84E67A95B3693 /* Pods-OLEContainerScrollViewDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OLEContainerScrollViewDemo.xcconfig"; path = "Pods/Pods-OLEContainerScrollViewDemo.xcconfig"; sourceTree = "<group>"; };
-		FE2BEBEEEF454AFB9C289590 /* libPods-OLEContainerScrollViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OLEContainerScrollViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,17 +78,6 @@
 				5DBDF1E718D5F26B005B1E18 /* CoreGraphics.framework in Frameworks */,
 				5DBDF1E918D5F26B005B1E18 /* UIKit.framework in Frameworks */,
 				5DBDF1E518D5F26B005B1E18 /* Foundation.framework in Frameworks */,
-				53226DF5431F4EF0A0BD9E0B /* libPods-OLEContainerScrollViewDemo.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5DBDF1FF18D5F26B005B1E18 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DBDF20418D5F26B005B1E18 /* XCTest.framework in Frameworks */,
-				5DBDF20618D5F26B005B1E18 /* UIKit.framework in Frameworks */,
-				5DBDF20518D5F26B005B1E18 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,19 +96,25 @@
 				5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */,
 				5DBDF1F918D5F26B005B1E18 /* CustomContainerScrollViewController.h */,
 				5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */,
+				5D050BE21959D8F200D2447F /* MultipleCollectionsViewController.h */,
+				5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */,
+				5D8CFD791981729D00B3B7F7 /* MultipleTableViewsViewController.h */,
+				5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
 		};
-		5D56AD99192A2C9000C42405 /* Helper Views */ = {
+		5D56AD99192A2C9000C42405 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				5DBDF21918D5F2A2005B1E18 /* SimulatedTableView.h */,
-				5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */,
+				5DBDF21918D5F2A2005B1E18 /* OLESimulatedTableView.h */,
+				5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */,
 				5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */,
 				5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */,
+				5D050BE51959DEAD00D2447F /* UIColor+RandomColor.h */,
+				5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */,
 			);
-			name = "Helper Views";
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		5DBDF1D818D5F26B005B1E18 = {
@@ -130,10 +122,8 @@
 			children = (
 				5DEAE59C192CF6A80075B6DE /* OLEContainerScrollView */,
 				5DBDF1EA18D5F26B005B1E18 /* OLEContainerScrollViewDemo */,
-				5DBDF20918D5F26B005B1E18 /* OLEContainerScrollViewDemoTests */,
 				5DBDF1E318D5F26B005B1E18 /* Frameworks */,
 				5DBDF1E218D5F26B005B1E18 /* Products */,
-				E5FA386E42C84E67A95B3693 /* Pods-OLEContainerScrollViewDemo.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				5DBDF1E118D5F26B005B1E18 /* OLEContainerScrollViewDemo.app */,
-				5DBDF20218D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,7 +142,6 @@
 				5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */,
 				5DBDF1E818D5F26B005B1E18 /* UIKit.framework */,
 				5DBDF20318D5F26B005B1E18 /* XCTest.framework */,
-				FE2BEBEEEF454AFB9C289590 /* libPods-OLEContainerScrollViewDemo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				5D56AD97192A2C7400C42405 /* Demo App */,
-				5D56AD99192A2C9000C42405 /* Helper Views */,
+				5D56AD99192A2C9000C42405 /* Helpers */,
 				5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */,
 				5DBDF1EB18D5F26B005B1E18 /* Supporting Files */,
 			);
@@ -180,29 +168,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5DBDF20918D5F26B005B1E18 /* OLEContainerScrollViewDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				5DBDF20F18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m */,
-				5DBDF20A18D5F26B005B1E18 /* Supporting Files */,
-			);
-			path = OLEContainerScrollViewDemoTests;
-			sourceTree = "<group>";
-		};
-		5DBDF20A18D5F26B005B1E18 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5DBDF20B18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests-Info.plist */,
-				5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		5DEAE59C192CF6A80075B6DE /* OLEContainerScrollView */ = {
 			isa = PBXGroup;
 			children = (
 				5DEAE59D192CF6A80075B6DE /* OLEContainerScrollView.h */,
 				5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */,
+				5D8CFD781981623200B3B7F7 /* OLEContainerScrollView_Private.h */,
+				5D8CFD7519815E5300B3B7F7 /* OLEContainerScrollViewContentView.h */,
+				5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */,
+				5D8CFD6C19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.h */,
+				5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */,
+				5D8CFD7219815DA800B3B7F7 /* OLESwizzling.h */,
+				5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */,
 			);
 			path = OLEContainerScrollView;
 			sourceTree = "<group>";
@@ -214,11 +191,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DBDF21318D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "OLEContainerScrollViewDemo" */;
 			buildPhases = (
-				C4663EC68F5946CE96041011 /* Check Pods Manifest.lock */,
 				5DBDF1DD18D5F26B005B1E18 /* Sources */,
 				5DBDF1DE18D5F26B005B1E18 /* Frameworks */,
 				5DBDF1DF18D5F26B005B1E18 /* Resources */,
-				88D12EE81B5C4A56B164E4A3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,24 +204,6 @@
 			productReference = 5DBDF1E118D5F26B005B1E18 /* OLEContainerScrollViewDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5DBDF20118D5F26B005B1E18 /* OLEContainerScrollViewDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5DBDF21618D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "OLEContainerScrollViewDemoTests" */;
-			buildPhases = (
-				5DBDF1FE18D5F26B005B1E18 /* Sources */,
-				5DBDF1FF18D5F26B005B1E18 /* Frameworks */,
-				5DBDF20018D5F26B005B1E18 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5DBDF20818D5F26B005B1E18 /* PBXTargetDependency */,
-			);
-			name = OLEContainerScrollViewDemoTests;
-			productName = ScrollVisualizationTests;
-			productReference = 5DBDF20218D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,11 +212,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Ole Begemann";
-				TargetAttributes = {
-					5DBDF20118D5F26B005B1E18 = {
-						TestTargetID = 5DBDF1E018D5F26B005B1E18;
-					};
-				};
 			};
 			buildConfigurationList = 5DBDF1DC18D5F26B005B1E18 /* Build configuration list for PBXProject "OLEContainerScrollViewDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -275,7 +227,6 @@
 			projectRoot = "";
 			targets = (
 				5DBDF1E018D5F26B005B1E18 /* OLEContainerScrollViewDemo */,
-				5DBDF20118D5F26B005B1E18 /* OLEContainerScrollViewDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,48 +242,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DBDF20018D5F26B005B1E18 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DBDF20E18D5F26B005B1E18 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		88D12EE81B5C4A56B164E4A3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-OLEContainerScrollViewDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4663EC68F5946CE96041011 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DBDF1DD18D5F26B005B1E18 /* Sources */ = {
@@ -341,32 +251,22 @@
 			files = (
 				5DEAE59F192CF6A80075B6DE /* OLEContainerScrollView.m in Sources */,
 				5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */,
+				5D050BE41959D8F200D2447F /* MultipleCollectionsViewController.m in Sources */,
 				5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */,
+				5D8CFD7B1981729D00B3B7F7 /* MultipleTableViewsViewController.m in Sources */,
 				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
+				5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
-				5DBDF21B18D5F2A2005B1E18 /* SimulatedTableView.m in Sources */,
+				5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */,
+				5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */,
+				5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */,
+				5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */,
 				5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */,
 				5DBDF1F118D5F26B005B1E18 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5DBDF1FE18D5F26B005B1E18 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DBDF21018D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5DBDF20818D5F26B005B1E18 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5DBDF1E018D5F26B005B1E18 /* OLEContainerScrollViewDemo */;
-			targetProxy = 5DBDF20718D5F26B005B1E18 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5DBDF1ED18D5F26B005B1E18 /* InfoPlist.strings */ = {
@@ -383,14 +283,6 @@
 				5DBDF1F718D5F26B005B1E18 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5DBDF20D18D5F26B005B1E18 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -432,6 +324,11 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 			};
 			name = Debug;
 		};
@@ -465,12 +362,16 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
 			};
 			name = Release;
 		};
 		5DBDF21418D5F26B005B1E18 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5FA386E42C84E67A95B3693 /* Pods-OLEContainerScrollViewDemo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -484,7 +385,6 @@
 		};
 		5DBDF21518D5F26B005B1E18 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5FA386E42C84E67A95B3693 /* Pods-OLEContainerScrollViewDemo.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -493,46 +393,6 @@
 				INFOPLIST_FILE = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Info.plist";
 				PRODUCT_NAME = OLEContainerScrollViewDemo;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		5DBDF21718D5F26B005B1E18 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OLEContainerScrollViewDemo.app/OLEContainerScrollViewDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "OLEContainerScrollViewDemoTests/OLEContainerScrollViewDemoTests-Info.plist";
-				PRODUCT_NAME = OLEContainerScrollViewDemoTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5DBDF21818D5F26B005B1E18 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OLEContainerScrollViewDemo.app/OLEContainerScrollViewDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Prefix.pch";
-				INFOPLIST_FILE = "OLEContainerScrollViewDemoTests/OLEContainerScrollViewDemoTests-Info.plist";
-				PRODUCT_NAME = OLEContainerScrollViewDemoTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -553,15 +413,6 @@
 			buildConfigurations = (
 				5DBDF21418D5F26B005B1E18 /* Debug */,
 				5DBDF21518D5F26B005B1E18 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5DBDF21618D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "OLEContainerScrollViewDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5DBDF21718D5F26B005B1E18 /* Debug */,
-				5DBDF21818D5F26B005B1E18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

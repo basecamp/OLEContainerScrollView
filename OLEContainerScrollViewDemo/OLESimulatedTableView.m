@@ -1,19 +1,17 @@
-//
-//  SimulatedTableView.m
-//  OLEContainerScrollViewDemo
-//
-//  Created by Ole Begemann on 16/03/14.
-//  Copyright (c) 2014 Ole Begemann. All rights reserved.
-//
+/*
+ OLEContainerScrollView
+ 
+ Copyright (c) 2014 Ole Begemann.
+ https://github.com/ole/OLEContainerScrollView
+ */
 
-#import "SimulatedTableView.h"
+#import "OLESimulatedTableView.h"
 #import "OLEBorderedView.h"
-#import <POP/POP.h>
 
 typedef OLEBorderedView OLESimulatedTableViewCell;
 
 
-@interface SimulatedTableView ()
+@interface OLESimulatedTableView ()
 
 @property (nonatomic, strong) NSMutableArray *cells;
 @property (nonatomic, strong) NSMutableSet *visibleCells;
@@ -23,7 +21,7 @@ typedef OLEBorderedView OLESimulatedTableViewCell;
 @end
 
 
-@implementation SimulatedTableView
+@implementation OLESimulatedTableView
 
 - (instancetype)initWithNumberOfRows:(NSUInteger)numberOfRows rowHeight:(CGFloat)rowHeight edgeInsets:(UIEdgeInsets)edgeInsets cellSpacing:(CGFloat)cellSpacing
 {
@@ -166,7 +164,7 @@ typedef OLEBorderedView OLESimulatedTableViewCell;
 
 - (void)setShowBoundsOutline:(BOOL)showBoundsOutline
 {
-    showBoundsOutline = _showBoundsOutline;
+    _showBoundsOutline = showBoundsOutline;
     [self setNeedsLayout];
 }
 

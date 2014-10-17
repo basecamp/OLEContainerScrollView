@@ -1,31 +1,41 @@
-//
-//  OLEContainerScrollView.m
-//  ScrollView
-//
-//  Created by Ole Begemann on 26.09.13.
-//  Copyright (c) 2013 Ole Begemann. All rights reserved.
-//
+/*
+ OLEContainerScrollView
+ 
+ Copyright (c) 2014 Ole Begemann.
+ https://github.com/ole/OLEContainerScrollView
+ */
 
 @import QuartzCore;
 
 #import "OLEContainerScrollView.h"
+#import "OLEContainerScrollView_Private.h"
+#import "OLEContainerScrollViewContentView.h"
+#import "OLEContainerScrollView+Swizzling.h"
 
 @interface OLEContainerScrollView ()
 
-@property (nonatomic, readonly) UIView *contentView;
+@property (nonatomic, readonly) NSMutableArray *subviewsInLayoutOrder;
 
 @end
 
 
 @implementation OLEContainerScrollView
 
-static void *KVOContext = &KVOContext;
++ (void)initialize
+{
+    // +initialize can be called multiple times if subclasses don't implement it.
+    // Protect against multiple calls
+    if (self == [OLEContainerScrollView self]) {
+        swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates();
+        swizzleUITableView();
+    }
+}
 
 - (void)dealloc
 {
     // Removing the subviews will unregister KVO observers
     for (UIView *subview in self.contentView.subviews) {
-        [self removeSubviewFromContainer:subview];
+        [subview removeFromSuperview];
     }
 }
 
@@ -40,21 +50,23 @@ static void *KVOContext = &KVOContext;
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self commonInitForOLEContainerScrollView];
 }
 
 - (void)commonInitForOLEContainerScrollView
 {
-    _contentView = [[UIView alloc] initWithFrame:CGRectZero];
+    _contentView = [[OLEContainerScrollViewContentView alloc] initWithFrame:CGRectZero];
     [self addSubview:_contentView];
+    _subviewsInLayoutOrder = [NSMutableArray arrayWithCapacity:4];
 }
 
 #pragma mark - Adding and removing subviews
 
-- (void)addSubviewToContainer:(UIView *)subview
+- (void)didAddSubviewToContainer:(UIView *)subview
 {
     NSParameterAssert(subview != nil);
-    [self.contentView addSubview:subview];
+    [self.subviewsInLayoutOrder addObject:subview];
     
     if ([subview isKindOfClass:[UIScrollView class]]) {
         UIScrollView *scrollView = (UIScrollView *)subview;
@@ -72,7 +84,7 @@ static void *KVOContext = &KVOContext;
     [self setNeedsLayout];
 }
 
-- (void)removeSubviewFromContainer:(UIView *)subview
+- (void)willRemoveSubviewFromContainer:(UIView *)subview
 {
     NSParameterAssert(subview != nil);
     
@@ -84,11 +96,13 @@ static void *KVOContext = &KVOContext;
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(frame)) context:KVOContext];
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(bounds)) context:KVOContext];
     }
-    [subview removeFromSuperview];
+    [self.subviewsInLayoutOrder removeObject:subview];
     [self setNeedsLayout];
 }
 
 #pragma mark - KVO
+
+static void *KVOContext = &KVOContext;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
@@ -100,6 +114,7 @@ static void *KVOContext = &KVOContext;
             CGSize newContentSize = scrollView.contentSize;
             if (!CGSizeEqualToSize(newContentSize, oldContentSize)) {
                 [self setNeedsLayout];
+                [self layoutIfNeeded];
             }
         } else if ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] ||
                    [keyPath isEqualToString:NSStringFromSelector(@selector(bounds))]) {
@@ -108,6 +123,7 @@ static void *KVOContext = &KVOContext;
             CGRect newFrame = subview.frame;
             if (!CGRectEqualToRect(newFrame, oldFrame)) {
                 [self setNeedsLayout];
+                [self layoutIfNeeded];
             }
         }
     } else {
@@ -134,7 +150,7 @@ static void *KVOContext = &KVOContext;
     // space. For non-scroll views, we reserve their current frame.size.height as vertical space.
     CGFloat yOffsetOfCurrentSubview = 0.0;
     
-    for (UIView *subview in self.contentView.subviews)
+    for (UIView *subview in self.subviewsInLayoutOrder)
     {
         if ([subview isKindOfClass:[UIScrollView class]]) {
             UIScrollView *scrollView = (UIScrollView *)subview;
@@ -170,7 +186,7 @@ static void *KVOContext = &KVOContext;
             scrollView.frame = frame;
             scrollView.contentOffset = contentOffset;
 
-            yOffsetOfCurrentSubview += scrollView.contentSize.height;
+            yOffsetOfCurrentSubview += scrollView.contentSize.height + scrollView.contentInset.top + scrollView.contentInset.bottom;
         } else if ([subview isKindOfClass:[UIWebView class]]) {
             UIWebView *webView = (UIWebView *)subview;
             UIScrollView *scrollView = webView.scrollView;
@@ -206,7 +222,7 @@ static void *KVOContext = &KVOContext;
             webView.frame = frame;
             scrollView.contentOffset = contentOffset;
             
-            yOffsetOfCurrentSubview += scrollView.contentSize.height;
+            yOffsetOfCurrentSubview += scrollView.contentSize.height + scrollView.contentInset.top + scrollView.contentInset.bottom;
         }
         else {
             // Normal views are simply positioned at the current offset
@@ -219,7 +235,11 @@ static void *KVOContext = &KVOContext;
         }
     }
     
-    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, self.bounds.size.height));
+    // If our content is shorter than our bounds height, take the contentInset into account to avoid
+    // scrolling when it is not needed.
+    CGFloat minimumContentHeight = self.bounds.size.height - (self.contentInset.top + self.contentInset.bottom);
+
+    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, minimumContentHeight));
 }
 
 @end
