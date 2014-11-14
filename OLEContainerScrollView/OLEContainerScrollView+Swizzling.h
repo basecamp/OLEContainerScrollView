@@ -6,4 +6,3 @@
  */
 
 void swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates();
-void swizzleUITableView();

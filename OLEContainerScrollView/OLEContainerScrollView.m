@@ -27,7 +27,6 @@
     // Protect against multiple calls
     if (self == [OLEContainerScrollView self]) {
         swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates();
-        swizzleUITableView();
     }
 }
 
